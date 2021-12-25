@@ -26,9 +26,11 @@ public class ExamResult {
     @JoinColumn(name="EXAM_ID", nullable=false)
     private Exam examId;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="STUDENT_ID", nullable=false)
-    private Student studentId;
+    @Column(name = "STUDENT_NAME")
+    private String studentName;
+
+    @Column(name = "ROLL_NUMBER")
+    private int rollNumber;
 
     @Column(name = "GRADE")
     private Grade grade;

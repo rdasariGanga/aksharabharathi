@@ -25,9 +25,11 @@ public class Attendance {
     @Column(name = "DATE")
     private Timestamp date;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "STUDENT_ID", nullable = true)
-    private long studentId;
+    @Column(name = "STUDENT_NAME")
+    private String studentName;
+
+    @Column(name = "ROLL_NUMBER")
+    private int rollNumber;
 
     //check is this can be made as obsolete
     @Column(name = "Grade")
